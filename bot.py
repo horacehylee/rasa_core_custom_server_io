@@ -19,7 +19,7 @@ from rasa_core.featurizers import (
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.policies.memoization import MemoizationPolicy
 
-from channel import CustomInputComponent
+from channel import CustomInputComponent, CustomInputCollectingComponent
 from rasa_core.channels.rest import HttpInputChannel
 
 import warnings
@@ -104,7 +104,7 @@ def run_server(serve_forever=True):
     agent = Agent.load("models/dialogue", interpreter=interpreter)
 
     if serve_forever:
-        input_blueprint = CustomInputComponent('http://localhost:8124/')
+        input_blueprint = CustomInputCollectingComponent('http://localhost:8124/')
         input_channel = HttpInputChannel(3000, None, input_blueprint)
         agent.handle_channel(input_channel)
     return agent
