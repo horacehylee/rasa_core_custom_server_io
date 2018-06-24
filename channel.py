@@ -43,11 +43,11 @@ class CustomInputCollectingComponent(HttpInputComponent):
         custom_webhook = Blueprint('custom_webhook', __name__)
 
         @custom_webhook.route("/", methods=['GET'])
-        def health():
+        def _health():
             return jsonify({"status": "ok"})
 
         @custom_webhook.route("/webhook", methods=['POST'])
-        def receive():
+        def _receive():
             payload = request.json
             sender_id = payload.get("sender", None)
             text = payload.get("message", None)
@@ -108,11 +108,11 @@ class CustomInputComponent(HttpInputComponent):
         custom_webhook = Blueprint('custom_webhook', __name__)
 
         @custom_webhook.route("/", methods=['GET'])
-        def health():
+        def _health():
             return jsonify({"status": "ok"})
 
         @custom_webhook.route("/webhook", methods=['POST'])
-        def receive():
+        def _receive():
             payload = request.json
             sender_id = payload.get("sender", None)
             text = payload.get("message", None)
