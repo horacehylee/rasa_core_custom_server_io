@@ -12,6 +12,9 @@ run:
 run-server:
 	python bot.py run-server
 
+test:
+	python -m unittest discover -p "*_test.py"
+
 train:
 	rm -rf ./models
 	make train-nlu

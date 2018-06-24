@@ -14,19 +14,19 @@ class CollectingOutputChannel(OutputChannel):
     (doesn't send them anywhere, just collects them)."""
 
     def __init__(self):
-        self._messages = []
+        self.__messages = []
 
     def clear(self):
-        self._messages.clear()
+        self.__messages.clear()
 
     def get_messages(self):
-        return self._messages
+        return self.__messages
 
     def send_text_message(self, recipient_id, message):
-        self._messages.append(message)
+        self.__messages.append(message)
 
     def send_text_with_buttons(self, recipient_id, message, buttons):
-        self._messages.append(
+        self.__messages.append(
             {"recipient_id": recipient_id, "text": message, "data": buttons})
 
 
