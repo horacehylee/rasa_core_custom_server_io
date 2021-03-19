@@ -46,7 +46,7 @@ pylint==1.9.2
 protobuf==3.6.0
 Automat==0.7.0
 youtube-dl==2018.6.19
-Jinja2==2.10
+Jinja2==2.11.3
 astroid==1.6.5
 termcolor==1.1.0
 pycodestyle==2.4.0
