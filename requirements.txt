@@ -99,7 +99,7 @@ jsonschema==2.6.0
 python-telegram-bot==10.1.0
 twilio==6.14.6
 Keras-Preprocessing==1.0.1
-Twisted==22.1.0
+Twisted==22.2.0
 fbmessenger==5.1.0
 tabulate==0.8.2
 python-crfsuite==0.9.5
