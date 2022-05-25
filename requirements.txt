@@ -91,7 +91,7 @@ ConfigArgParse==0.13.0
 fakeredis==0.10.3
 cffi==1.11.5
 docutils==0.14
-PyJWT==1.6.4
+PyJWT==2.4.0
 simplejson==3.15.0
 s3transfer==0.1.13
 boto3==1.7.45
